@@ -12,6 +12,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Hiro",
   description: "Digital collaboration whiteboard",
+  icons: {
+    icon: [{ url: "/logo.svg", href: "/logo.svg" }],
+  },
 };
 
 export default function RootLayout({
