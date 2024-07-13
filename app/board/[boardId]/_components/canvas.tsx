@@ -395,14 +395,11 @@ export const Canvas = ({ boardId }: CanvasProps) => {
     function onKeyDown(e: KeyboardEvent) {
       switch (e.key) {
         case "z": {
-          if (e.ctrlKey || e.metaKey) {
-            if (e.shiftKey) {
-              history.redo();
-            } else {
-              history.undo();
-            }
-            break;
-          }
+          if (e.ctrlKey) history.undo();
+          break;
+        }
+        case "y": {
+          if (e.ctrlKey) history.redo();
         }
       }
     }
